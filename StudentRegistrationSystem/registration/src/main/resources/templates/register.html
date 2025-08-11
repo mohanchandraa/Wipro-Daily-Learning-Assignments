@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student Registration</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f0f0;
+            padding: 30px;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+        input[type=submit] {
+            background: #28a745;
+            color: white;
+            border: none;
+        }
+        .message {
+            color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align:center;">Student Registration Form</h2>
+
+    <div th:if="${message}" class="message" th:text="${message}"></div>
+
+    <form th:action="@{/register}" th:object="${student}" method="post">
+        <input type="text" th:field="*{name}" placeholder="Name" required />
+        <input type="number" th:field="*{age}" placeholder="Age" required />
+        <input type="text" th:field="*{phone}" placeholder="Phone Number" required />
+        <input type="email" th:field="*{email}" placeholder="Email" required />
+        <input type="text" th:field="*{school}" placeholder="School Name" required />
+        <input type="submit" value="Register" />
+    </form>
+
+</body>
+</html>
