@@ -1,0 +1,48 @@
+<mat-card class="todo-card">
+  <div class="header">
+    <h2>To-Do App</h2>
+  </div>
+
+  <div class="add-row">
+    <mat-form-field class="full" appearance="outline">
+      <mat-label>Add a task</mat-label>
+      <input matInput placeholder="e.g. Add your task" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary">
+      <mat-icon>add</mat-icon>
+      Add
+    </button>
+  </div>
+
+  <div class="list">
+    <div class="item">
+      <mat-checkbox></mat-checkbox>
+      <div class="title">Finish notes</div>
+      <div class="actions">
+        <button mat-icon-button aria-label="Edit"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="warn" aria-label="Delete"><mat-icon>delete</mat-icon></button>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+
+    <div class="item">
+      <mat-checkbox></mat-checkbox>
+      <div class="title">Practice springboot</div>
+      <div class="actions">
+        <button mat-icon-button aria-label="Edit"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="warn" aria-label="Delete"><mat-icon>delete</mat-icon></button>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+
+    <div class="item">
+      <mat-checkbox></mat-checkbox>
+      <div class="title">Edit code</div>
+      <div class="actions">
+        <button mat-icon-button aria-label="Edit"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="warn" aria-label="Delete"><mat-icon>delete</mat-icon></button>
+      </div>
+    </div>
+  </div>
+</mat-card>
