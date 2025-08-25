@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <span class="navbar-brand fw-bold">NavBar</span>
+
+    <div class="mx-auto d-flex flex-row gap-4">
+      <app-home></app-home>
+      <app-about></app-about>
+      <app-services></app-services>
+    </div>
+
+    <div class="d-flex flex-row gap-3 ms-auto">
+      <app-signin></app-signin>
+      <app-signup></app-signup>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <div class="mb-5 text-center">
+    <button class="btn btn-success me-2 px-4" (click)="increment()">Increase</button>
+    <button class="btn btn-danger px-4" (click)="decrement()">Decrease</button>
+    <h1 class="mt-3 text-primary">Count: {{ count }}</h1>
+  </div>
+
+  <hr>
+
+  <div class="text-center">
+    <input type="number" [(ngModel)]="num1" placeholder="Enter first number"
+           class="form-control d-inline w-auto me-2 text-center">
+    <input type="number" [(ngModel)]="num2" placeholder="Enter second number"
+           class="form-control d-inline w-auto me-2 text-center">
+
+    <div class="mt-3">
+      <button class="btn btn-primary me-2 px-4" (click)="addNumbers()">Add</button>
+      <button class="btn btn-warning me-2 px-4" (click)="subtractNumbers()">Subtract</button>
+      <button class="btn btn-info me-2 px-4" (click)="multiplyNumbers()">Multiply</button>
+      <button class="btn btn-dark px-4" (click)="divideNumbers()">Divide</button>
+    </div>
+
+    <h2 class="mt-4 text-success">Result: {{ result }}</h2>
+  </div>
+</div>
